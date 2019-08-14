@@ -1,24 +1,24 @@
 <template>
     <div class="bottom-tab">
-        <span class="tab-item">
+        <span class="tab-item" @click="switchTo('/home')">
             <img :src="$route.path.includes('/home')?TabBarImgArr[0].selected:TabBarImgArr[0].normal">
-            <span @click="switchTo('/home')" :class="{'on': '/home' == $route.path}">首页</span>
+            <span :class="{'on': '/home' == $route.path}">首页</span>
         </span>
-        <span class="tab-item">
+        <span class="tab-item" @click="switchTo('/recommend')">
             <img :src="$route.path.includes('/recommend')?TabBarImgArr[1].selected:TabBarImgArr[1].normal">
-            <span @click="switchTo('/recommend')" :class="{'on': '/recommend' == $route.path}">推荐</span>
+            <span :class="{'on': '/recommend' == $route.path}">推荐</span>
         </span>
-        <span class="tab-item">
+        <span class="tab-item" @click="switchTo('/search')">
             <img :src="$route.path.includes('/search')?TabBarImgArr[2].selected:TabBarImgArr[2].normal">
-            <span @click="switchTo('/search')" :class="{'on': '/search' == $route.path}">搜索</span>
+            <span :class="{'on': '/search' == $route.path}">搜索</span>
         </span>
-        <span class="tab-item">
+        <span class="tab-item" @click="switchTo('/chat')">
             <img :src="$route.path.includes('/chat')?TabBarImgArr[3].selected:TabBarImgArr[3].normal">
-            <span @click="switchTo('/chat')" :class="{'on': '/chat' == $route.path}">聊天</span>
+            <span :class="{'on': '/chat' == $route.path}">聊天</span>
         </span>
-        <span class="tab-item">
+        <span class="tab-item" @click="switchTo('/me')">
             <img :src="$route.path.includes('/me')?TabBarImgArr[4].selected:TabBarImgArr[4].normal">
-            <span @click="switchTo('/me')" :class="{'on': '/me' == $route.path}">我的</span>
+            <span :class="{'on': '/me' == $route.path}">我的</span>
         </span>
     </div>
 </template>
@@ -69,7 +69,7 @@ export default {
     height 50px
     color #666
     background-color #fff
-    z-index 999 
+    z-index 999
     .tab-item
       display flex
       flex 1
@@ -77,7 +77,7 @@ export default {
       align-items center
       justify-content center
       font-size 12px
-      img 
+      img
         width 35%
         margin-bottom 2px
       .on
